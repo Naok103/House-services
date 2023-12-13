@@ -1,0 +1,150 @@
+Codigo da mockup do caso de uso Criar Anuncio
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anúncio de Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .servico {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .contato {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .p {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: right; 
+        }
+        
+        header {
+            background-color: #B0E0E6;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #btn-criar,
+        #btn-minha-conta {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 3px;
+        }
+        
+        #btn-publish,
+        #btn-cancel {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 3px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header > 
+        <h1> Reapps </h1>
+        <div>
+        <button id="btn-criar" onclick="criarFuncao()">Criar Anuncio</button>
+        <button id="btn-minha-conta" onclick="minhaContaFuncao()">Minha Conta</button>
+        </div>
+    </header>
+
+    <h1>Criar Anuncio</h1>
+
+    <div class="servico">
+        <h2>Tipo de Serviço</h2>
+         
+        <label for="data">Escolha uma opção:</label>
+
+        <p></p>
+        <select id="opcoes">
+            <option value="opcao1">Categoria</option>
+            <option value="opcao1">CANALIZADOR</option>
+            <option value="opcao2">ELETRICISTA</option>
+            <option value="opcao3">SERRALHEIRO</option>
+            <option value="opcao3">CALCETEIRO</option>
+            <option value="opcao3">CARPINTEIRO</option>
+            <option value="opcao3">PEDREIRO</option>
+            <option value="opcao3">PINTOR</option>
+        </select>
+        <br><br>
+    </div>
+
+    <div class="servico">
+        <h2>Data</h2>
+        <label for="data">Escreva a data que pretende que se realize o serviço:</label>
+        <p></p>
+        <input type="date" id="data" name="data">
+    </div>
+
+    <div class="servico">
+        <h2>Localizaçao</h2>
+        <label for="servico">Escreva a localização do serviço:</label>
+        <p></p>
+        <input type="text" id="servico" name="servico" required>
+    </div>
+    
+    <div class="servico">
+        <h2>Descriçao</h2>
+        <label for="descricao">Escreva uma descrição:</label>
+        <p></p>
+        <textarea id="text" name="descricao" required></textarea>
+    </div>
+    
+    <div class="p">
+        
+        <button id="btn-cancel" onclick="closeDialog()">Cancelar</button>
+        <button id="btn-publish" onclick="publishAd()"> Publicar Anúncio</button>
+        
+
+    </div>
+
+    <div class="contato">
+        <h2>Entre em Contato</h2>
+        <p>Apoio ao Cliente:</p>
+        <p>Telefone: (+351) 985648759</p>
+        <p>Email: reapps@gmail.com</p>
+    </div>
+
+</body>
+</html>
