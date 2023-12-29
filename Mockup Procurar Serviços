@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .servico {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .contato {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .p {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: right; 
+        }
+
+        header {
+            background-color: #B0E0E6;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #btn-criar,
+        #btn-minha-conta {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 3px;
+        }
+
+        #btn-publish,
+        #btn-cancel {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 3px;
+        }
+
+        .filtro-container {
+            display: none;
+        }
+
+        .mostrar-filtros {
+            cursor: pointer;
+            color: blue;
+        }   
+
+        .resultado-pesquisa {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .quadrado {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #ccc;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <title>Anúncio de Serviços</title>
+</head>
+<body>
+
+<header > 
+    <h1> Reapps </h1>
+    <div>
+        <button id="btn-criar" onclick="criarFuncao()">Criar Anuncio</button>
+        <button id="btn-minha-conta" onclick="minhaContaFuncao()">Minha Conta</button>
+    </div>
+</header>
+
+<h1>Criar Proposta</h1>
+
+<label for="pesquisa">Pesquisar:</label>
+<input type="text" id="pesquisa" name="q" placeholder="Digite sua pesquisa aqui...">
+<button id="btn-cancel" onclick="mostrarResultado()"> Buscar </button>
+
+<button class="mostrar-filtros" onclick="toggleFiltros()">Filtro</button>
+
+<div class="filtro-container" id="filtros">
+    <h2>Categoria :</h2>
+    <label>
+        <input type="checkbox" name="filtro1">CANALIZADOR
+    </label>
+    <label>
+        <input type="checkbox" name="filtro2">ELETRICISTA
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3">SERRALHEIRO
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3">CALCETEIRO
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3">CARPINTEIRO
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3">PEDREIRO
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3">PINTOR
+    </label>
+    <h2>Localizao :</h2>
+    <label>
+        <input type="checkbox" name="filtro1"> Lisboa
+    </label>
+    <label>
+        <input type="checkbox" name="filtro2"> Porto
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3"> Braga
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3"> Coimbra
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3"> Faro
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3"> Aveiro
+    </label>
+    <label>
+        <input type="checkbox" name="filtro3"> Beja
+    </label>
+    <!-- Adicione mais condições de filtro conforme necessário -->
+    </div>
+
+<div class="resultado-pesquisa" id="resultado">
+    <h2>Resultado:</h2>
+    
+    <div class="quadrados-container">
+        <div class="quadrado">
+            <h3>Reparacao de casa de banho</h3>
+            <h4>Contacto : 987451232</h4>
+        </div>
+
+        <div class="quadrado">
+            <h3>Reparacao de cozinha</h3>
+            <h4>Contacto : 987481731</h4>
+        </div>
+
+        <div class="quadrado">
+            <h3>Reconstrucao de casa</h3>
+            <h4>Contacto : 985167845</h4>
+        </div>
+    </div>
+</div>
+
+<div class="p">
+    <button id="btn-cancel" onclick="closeDialog()">Voltar</button>
+</div>
+
+<div class="contato">
+    <h2>Entre em Contato</h2>
+    <p>Apoio ao Cliente:</p>
+    <p>Telefone: (+351) 985648759</p>
+    <p>Email: reapps@gmail.com</p>
+</div>
+
+<script>
+    function toggleFiltros() {
+        var filtroContainer = document.getElementById("filtros");
+        if (filtroContainer.style.display === "none") {
+            filtroContainer.style.display = "block";
+        } else {
+            filtroContainer.style.display = "none";
+        }
+    }
+
+    function mostrarResultado() {
+        var resultadoDiv = document.getElementById("resultado");
+        if (resultadoDiv.style.display === "none") {
+            resultadoDiv.style.display = "block";
+        } else {
+            resultadoDiv.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
