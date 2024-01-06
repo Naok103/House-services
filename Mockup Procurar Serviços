@@ -163,7 +163,6 @@
     <label>
         <input type="checkbox" name="filtro3"> Beja
     </label>
-    <!-- Adicione mais condições de filtro conforme necessário -->
     </div>
 
 <div class="resultado-pesquisa" id="resultado">
