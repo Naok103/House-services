@@ -1,0 +1,191 @@
+codigo da mockup para o caso de uso Aceitar Proposta
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anúncio de Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .servico {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .contato {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .p {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: right; 
+        }
+        
+        header {
+            background-color: #B0E0E6;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #btn-criar,
+        #btn-minha-conta {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 3px;
+        }
+        
+        #btn-publish,
+        #btn-cancel {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 3px;
+        }
+        
+        
+        .quadrado {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #ccc;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        
+    </style>
+    
+    
+    
+</head>
+<body>
+
+    <header > 
+        <h1> Reapps </h1>
+        <div>
+        <button id="btn-criar" onclick="criarFuncao()">Criar Anuncio</button>
+        <button id="btn-minha-conta" onclick="minhaContaFuncao()">Minha Conta</button>
+        </div>
+    </header>
+
+   
+
+    
+    
+    
+    <div class="quadrados-container">
+        <div class="quadrado">
+            <h3>Proposta para a Reparacao de casa de banho</h3>
+            <button id="btn-cancel" onclick="mostrarResultado()"> Ver Proposta </button>
+        </div>
+
+        
+    </div>
+    <div class="resultado-pesquisa" id="resultado">
+    
+    <div class="servico">
+        <h2>Montante</h2>
+         
+        <label for="descricao">Montante Proposto:</label>
+
+        <p></p>
+        
+        
+    </div>
+
+    <div class="servico">
+        <h2>Data Limite</h2>
+        <label for="data">Data limite para a resposta:</label>
+        <p></p>
+       
+    </div>
+
+    <div class="servico">
+        <h2>Data serviço</h2>
+        <label for="servico">Data disponivel para realizar o trabalho:</label>
+        <p></p>
+       
+    </div>
+    
+    <div class="servico">
+        <h2>Descriçao</h2>
+
+    </div>
+    
+    <div class="servico">
+        <h2>Contacto</h2>
+        <label for="descricao">Contactos do empresario:</label>
+        <p></p>
+        
+    </div>
+    
+    </div>
+    <div class="p">
+        
+        <button id="btn-cancel" onclick="closeDialog()">Aceitar Proposta</button>
+        <button id="btn-publish" onclick="publishAd()">Fazer ContraProposta</button>
+
+    </div>
+
+    <div class="contato">
+        <h2>Entre em Contato</h2>
+        <p>Apoio ao Cliente:</p>
+        <p>Telefone: (+351) 985648759</p>
+        <p>Email: reapps@gmail.com</p>
+    </div>
+<script>
+    function toggleFiltros() {
+        var filtroContainer = document.getElementById("filtros");
+        if (filtroContainer.style.display === "none") {
+            filtroContainer.style.display = "block";
+        } else {
+            filtroContainer.style.display = "none";
+        }
+    }
+
+    function mostrarResultado() {
+        var resultadoDiv = document.getElementById("resultado");
+        if (resultadoDiv.style.display === "none") {
+            resultadoDiv.style.display = "block";
+        } else {
+            resultadoDiv.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
