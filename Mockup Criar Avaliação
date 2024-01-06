@@ -1,0 +1,167 @@
+codigo da mockup do caso de uso Criar Avaliação
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .servico {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .contato {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        
+
+        
+
+        
+        
+        .p {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: right; 
+        }
+
+        header {
+            background-color: #B0E0E6;
+            color: white;
+            padding: 5px;
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #btn-criar,
+        #btn-minha-conta {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 3px;
+        }
+
+        #btn-publish,
+        #btn-cancel {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50; 
+            border: none;
+            border-radius: 3px;
+        }
+
+        
+    </style>
+    <title>Anúncio de Serviços</title>
+</head>
+<body>
+
+<header > 
+    <h1> Reapps </h1>
+    <div>
+        <button id="btn-criar" onclick="criarFuncao()">Criar Anuncio</button>
+        <button id="btn-minha-conta" onclick="minhaContaFuncao()">Minha Conta</button>
+    </div>
+</header>
+
+<h1>Criar Proposta</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Avaliação</title>
+    <style>
+        label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    
+<div class="servico">
+        <h2>Avalie de 0 a 5:</h2>
+
+    <form action="processar_avaliacao.php" method="post">
+        <label for="pontuacao0">0</label>
+        <input type="radio" name="pontuacao" id="pontuacao0" value="0">
+
+        <label for="pontuacao1">1</label>
+        <input type="radio" name="pontuacao" id="pontuacao1" value="1">
+
+        <label for="pontuacao2">2</label>
+        <input type="radio" name="pontuacao" id="pontuacao2" value="2">
+
+        <label for="pontuacao3">3</label>
+        <input type="radio" name="pontuacao" id="pontuacao3" value="3">
+
+        <label for="pontuacao4">4</label>
+        <input type="radio" name="pontuacao" id="pontuacao4" value="4">
+
+        <label for="pontuacao5">5</label>
+        <input type="radio" name="pontuacao" id="pontuacao5" value="5">
+
+        <input type="submit" value="Enviar Avaliação">
+    </form>
+       
+    </div>
+    
+    <div class="servico">
+        <h2>Descriçao</h2>
+        <label for="descricao">Escreva uma descrição:</label>
+        <p></p>
+        <textarea id="text" name="descricao" required></textarea>
+    </div>
+    
+</body>
+</html>
+
+<div class="p">
+    <button id="btn-cancel" onclick="closeDialog()">Cancelar</button>
+    <button id="btn-cancel" onclick="closeDialog()">Publicar Avaliação</button>
+</div>
+
+<div class="contato">
+    <h2>Entre em Contato</h2>
+    <p>Apoio ao Cliente:</p>
+    <p>Telefone: (+351) 985648759</p>
+    <p>Email: reapps@gmail.com</p>
+</div>
+
+</body>
+</html>
